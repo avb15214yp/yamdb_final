@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: avb15214/api_yamdb_web:v1.1.1
+    build: ../api_yamdb
     restart: always
     volumes:
       - static_value:/app/static/
@@ -19,6 +19,8 @@ services:
       - db
     env_file:
       - ./.env
+    container_name: yamdb_final
+    image: avb15214/yamdb_finale:latest
 
   nginx:
     image: nginx:1.21.3-alpine
