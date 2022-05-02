@@ -64,6 +64,7 @@ class IsAuthorOrAdminOrModerator(permissions.BasePermission):
                 return True
         if request.method in permissions.SAFE_METHODS:
             return True
+        return False
 
 
 class AdminOrReadOnly(permissions.BasePermission):
