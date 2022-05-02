@@ -1,8 +1,9 @@
-from api.mixins import BaseViewSet, ListCreateViewSet
-from api.permissions import AdminOrReadOnly
 from django.db.models import Avg
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
+
+from api.mixins import BaseViewSet, ListCreateViewSet
+from api.permissions import AdminOrReadOnly
 from titles.filters import TitleFilter
 from titles.models import Category, Genre, Title
 from titles.serializers import (CategorySerializer, GenreSerializer,
