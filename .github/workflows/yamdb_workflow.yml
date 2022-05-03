@@ -63,7 +63,7 @@ jobs:
           context: api_yamdb/
           file: api_yamdb/Dockerfile
           push: true
-          tags: avb15214/yamdb_final:latest
+          tags: avb15214/yamdb_final
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
